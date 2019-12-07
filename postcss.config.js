@@ -1,9 +1,9 @@
 module.exports = ({ file, options, env }) => ({
-  plugins: {
-    "postcss-import": { root: file.dirname },
-    "postcss-preset-env": options["postcss-preset-env"]
-      ? options["postcss-preset-env"]
-      : false,
-    cssnano: env === "production" ? options.cssnano : false
-  }
+  plugins: [
+    require("postcss-import"),
+    require("postcss-preset-env"),
+    require("tailwindcss"),
+    require("autoprefixer"),
+    require("postcss-nested")
+  ]
 });

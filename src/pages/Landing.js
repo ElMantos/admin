@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing() {
   return (
-    <div>
+    <div className="flex justify-center">
       <h1>Landing</h1>
     </div>
   );
